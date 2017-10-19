@@ -11,7 +11,7 @@
 
 $urls = array('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 
-$api = "http://data.zz.baidu.com/urls?site=".$_SERVER['HTTP_HOST']."&token=2cPfHA0fSvNcMcVI";
+/*$api = "http://data.zz.baidu.com/urls?site=".$_SERVER['HTTP_HOST']."&token=2cPfHA0fSvNcMcVI";
 
 $ch = curl_init();
 $options =  array(
@@ -22,7 +22,7 @@ $options =  array(
     CURLOPT_HTTPHEADER => array('Content-Type: text/plain'),
 );
 curl_setopt_array($ch, $options);
-$result = curl_exec($ch);
+$result = curl_exec($ch);*/
 	if(!file_exists('inc/install.lock')) { echo '<script>location.href=\'install.php\';</script>';exit; }
 	define('MAC_MODULE','home');
 	require('inc/conn.php');
