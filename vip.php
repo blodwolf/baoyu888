@@ -185,7 +185,7 @@ $arr = array('生命可以归结为一种简单的选择：要么忙于生存，
         <div class="row text-center">
           <div class="col-sm-12">
             <br>
-<span>Copyright © 2017 <a href="http://www.hhh.cool/" rel="nofollow">大壮vip视频解析，Go!</a>  All Rights Reserved. 丨 <a target="_blank" href="http://www.hhh.cool/">17社区主页</a> 丨 <script src="https://s22.cnzz.com/z_stat.php?id=1264569967&web_id=1264569967" language="JavaScript"></script></div></div><br>
+<span>Copyright © 2017 <a href="http://www.hhh.cool/" rel="nofollow">大壮vip视频解析，Go!</a>  All Rights Reserved. 丨 <a target="_blank" href="http://www.hhh.cool/">17社区主页</a> 丨 <script src="https://s13.cnzz.com/z_stat.php?id=1265308701&web_id=1265308701" language="JavaScript"></script></div></div><br>
       </div>
     </div>
 </html>
