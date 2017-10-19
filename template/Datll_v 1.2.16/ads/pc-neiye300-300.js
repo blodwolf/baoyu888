@@ -1,0 +1,1 @@
+document.writeln("<a href=\"http://mp.weixin.qq.com/s?__biz=MzI1MTIyMTE2Nw==&mid=503339383&idx=1&sn=a40fabd81f1e1534229dbcea6ed5bb94#rd\/\"target=\"_blank\"><img src=\"\/template\//menghuan\/ads\/pc-neiye300-300.jpg\"><\/a>");

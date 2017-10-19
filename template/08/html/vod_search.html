@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="cache-control" content="no-siteapp">
+<title>{maccms:name}-{page:key}的搜索结果</title>
+{maccms:include}
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/movie.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js?ver=0.5'></script>
+<meta name="keywords" content="{page:key}在线观看,高清{page:key}在线观看,枪版{page:key}在线观看">
+<meta name="description" content="{maccms:description}">
+
+<link rel="Shortcut Icon" href="{maccms:path_tpl}images/favicon.png">
+<link rel="Bookmark" href="{maccms:path_tpl}images/favicon.png">
+<!--[if lt IE 9]><script src="{maccms:path}/js/html5.js"></script><![endif]-->
+</head>
+<body class="home blog">
+{maccms:head} 
+<div id="homeso">
+<form method="post" id="soform" style="text-align: center;float: none" action="{maccms:link_search_vod}">
+<img id="imgsrc" style="margin:10px" src="{maccms:path_tpl}images/sologo.png"><br><br>
+<input tabindex="2" class="homesoin" id="sos" name="wd" type="text" placeholder="这里是搜索，没有的在这里！" value="{page:key}">
+<button id="button" tabindex="3" class="homesobtn" type="submit"><i class="fa">搜索</i></button>
+</form>
+</div>
+<section class="container">
+<div class="single-strong">搜索&nbsp;{page:key}&nbsp;的结果共&nbsp;{page:count}&nbsp;条<span class="chak"></span></div>
+<div class="b-listtab-main">
+<div class="s-tab-main">
+<ul class="list g-clear">
+{maccms:vod pagesize=48 type=all order=desc by=time} 
+<li class='item'><a class='js-tongjic' href='[vod:playlink]' title='[vod:name]'  target="_blank">
+         <div class='cover g-playicon'>
+          <img src='[vod:pic]' alt='[vod:name]' />
+          <span class='pay'>[vod:typename]</span><span class='hint'>[vod:year]</span>
+         </div>
+         <div class='detail'>
+		 <p class='title g-clear'>
+           <span class='s1'>[vod:name]</span>
+           <span class='s2'>[vod:score]</span></p>
+         <p class='star'>[vod:starring]</p>
+          </div>
+         </a></li>
+{/maccms:vod}
+</ul>
+</div>
+     <div class="pages">{maccms:pages len=3}</div>
+</div>
+</section>
+{maccms:foot}
+</body>
+</html>

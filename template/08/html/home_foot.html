@@ -1,0 +1,17 @@
+﻿<div class="foornav">
+	<a href="{maccms:path}"  {if-A:{maccms:siteaid}=10}class="menu-itema"{endif-A}><span><img src="{maccms:path_tpl}/images/index.png"/>首页</span></a>
+{maccms:menu type=parent order=asc table=vod}{if-E:[menu:num]<5}<a href="[menu:link]" {if-A:{maccms:curvodtypeid}=[menu:id]}class="menu-itema"{endif-A}{if-A:{maccms:curvodtypepid}=[menu:id]}class="menu-itema"{endif-A}><span><img {if-A:[menu:id]=1}src="{maccms:path_tpl}images/video.png"{endif-A}{if-B:[menu:id]=2}src="{maccms:path_tpl}images/dianshi.png"{endif-B}{if-C:[menu:id]=3}src="{maccms:path_tpl}images/gouwu.png"{endif-C}{if-D:[menu:id]=4}src="{maccms:path_tpl}images/dianshiju.png"{endif-D}/>[menu:name]</span></a>{endif-E}{/maccms:menu}
+</div>
+<footer class="footer">
+<div class="branding branding-black">
+	<div class="container" style="text-align: center;">
+		<h2>{maccms:name} - 海量高清VIP视频免费观看       如发现部分视频无法播放，请联系管理员进行更新！</h2>
+						<a target="blank" class="gobtn" href="http://www.hhh.cool/jiexi.php">视频解析</a>	
+						<a target="blank" class="gobtn" href="http://www.hhh.cool/">网站主页</a>	
+						<a target="blank" class="gobtn" href="http://wpa.qq.com/msgrd?v=3&uin=6666666666&site=qq&menu=yes/">联系站长</a>	
+			</div>
+</div>
+<p style="padding: 0 4px;">免责声明:本站所有视频均来自互联网收集而来，版权归原创者所有，如果侵犯了你的权益，请通知我们，我们会及时删除侵权内容，谢谢合作！<br/>&copy; 2017 <a href="http://www.hhh.cool//">{maccms:name}</a>&nbsp; <a href="http://www.miitbeian.gov.cn">{maccms:icp}</a><br/>{maccms:visits}
+<script type='text/javascript' src='{maccms:path_tpl}js/main.js'></script>
+<script type="text/javascript"> document.body.oncontextmenu=document.body.ondragstart= document.body.onselectstart=document.body.onbeforecopy=function(){return false;};
+document.body.onselect=document.body.oncopy=document.body.onmouseup=function(){document.selection.empty();}; </script>

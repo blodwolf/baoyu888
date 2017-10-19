@@ -1,0 +1,8 @@
+网站设置,?m=system-config
+视频管理,?m=vod-list
+1905资源,1905ziyuan.html
+33uu资源,?m=collect-list-ac2--hour--xt-1-ct--group--flag-33uuzy-apiurl-http://www.33uudy.com/inc/api.php
+OK资源,okzyzy.html
+OK资源kuyun云,?m=collect-list-ac2--hour--xt-1-ct--group--flag-okzyzy-apiurl-http://api.iokzy.com/inc/apikuyun.php
+
+OK资源m3u8云,?m=collect-list-ac2--hour--xt-1-ct--group--flag-okzyzy-apiurl-http://api.iokzy.com/inc/apickm3u8.php

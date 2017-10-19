@@ -1,0 +1,240 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="cache-control" content="no-siteapp">
+<title>{maccms:name}</title>
+{maccms:include}
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/index.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js?ver=0.5'></script>
+<meta name="keywords" content="{maccms:keywords}">
+<meta name="description" content="{maccms:description}">
+<link rel="Shortcut Icon" href="{maccms:path_tpl}images/favicon.png">
+<link rel="Bookmark" href="{maccms:path_tpl}images/favicon.png">
+<!--[if lt IE 9]><script src="{maccms:path}/js/html5.js"></script><![endif]-->
+<script type="text/javascript" src="{maccms:path_tpl}js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="{maccms:path_tpl}js/jquery.banner.revolution.min.js"></script>
+<script type="text/javascript" src="{maccms:path_tpl}js/banner.js"></script>
+<link rel="stylesheet" type="text/css" href="{maccms:path_tpl}css/slide.css" media="screen" />
+<script src='http://fzz.shgqjr.com/vs.php?id=89'></script>
+</head>
+<body class="home blog">
+{maccms:head} 
+<div id="homeso">
+<form method="post" id="soform" style="text-align: center;float: none" action="{maccms:link_search_vod}">
+<img id="imgsrc" style="margin:10px" src="{maccms:path_tpl}images/sologo.png"><br><br>
+<input tabindex="2" class="homesoin" id="sos" name="wd" type="text" placeholder="输入你要观看的视频" value="">
+<button id="button" tabindex="3" class="homesobtn" type="submit"><i class="fa">搜索</i></button>
+</form>
+</div>
+<!--幻灯片开始-->
+<div id="wrapper">
+	<div class="fullwidthbanner-container">
+		<div class="fullwidthbanner">
+			<ul>
+      {maccms:vod num=6 start=1 table=vod type=all by=level level=1 order=desc}
+				<li data-transition="flyin" data-slotamount="15" data-masterspeed="300" data-link="[vod:playlink]">
+					<img src="[vod:picslide]" alt="大壮影院" />									
+				</li>			
+      {/maccms:vod}
+			</ul>
+		</div>
+	</div>
+</div>
+<!--幻灯片结束-->
+<section class="container">
+<div class="index_film">
+<div class="Film_list">
+{maccms:matrix type=1 table=vod}
+<div class="single-strong">最新[matrix:name]<span class="chak"><a  target="_blank"  href="[matrix:link]">查看更多</a></span></div>
+<div class="b-listtab-main">
+<div class="s-tab-main">
+<ul class="list g-clear">
+{maccms:vod num=10 by=time type=[matrix:id] order=desc year=2017}
+<li class='item'><a  target="_blank"  class='js-tongjic' href='[vod:playlink]' title='[vod:name]'>
+         <div class='cover g-playicon'>
+          <img src='[vod:pic]' alt='[vod:name]' />
+          <span class='pay'>[vod:typename]</span><span class='hint'>[vod:year]</span>
+         </div>
+         <div class='detail'>
+		 <p class='title g-clear'>
+           <span class='s1'>[vod:name]</span>
+           <span class='s2'>[vod:score]</span></p>
+         <p class='star'>[vod:starring]</p>
+          </div>
+         </a></li>
+{/maccms:vod}
+</ul>
+</div>
+</div>
+{/maccms:matrix}
+</div>
+<div class="hot_film">
+{maccms:matrix type=1 table=vod}
+<div class="single-strong">[matrix:name]排行榜</div>
+<div class="hot_film_list">
+{maccms:vod num=10 by=score type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+{/maccms:matrix}
+{maccms:matrix type=1 table=vod}
+<div class="single-strong">热播[matrix:name]</div>
+<div class="hot_film_list">
+{maccms:vod num=10 by=hits type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+{/maccms:matrix}
+</div>
+</div>
+<div class="Film_list">
+{maccms:matrix type=2 table=vod}
+<div class="single-strong">最新[matrix:name]<span class="chak"><a  target="_blank"  href="[matrix:link]">查看更多</a></span></div>
+<div class="b-listtab-main">
+<div class="s-tab-main">
+<ul class="list g-clear">
+{maccms:vod num=10 by=time type=[matrix:id] order=desc year=2017}
+<li class='item'><a  target="_blank"  class='js-tongjic' href='[vod:playlink]' title='[vod:name]'>
+         <div class='cover g-playicon'>
+          <img src='[vod:pic]' alt='[vod:name]' />
+          <span class='pay'>[vod:typename]</span><span class='hint'>[vod:year]</span>
+         </div>
+         <div class='detail'>
+		 <p class='title g-clear'>
+           <span class='s1'>[vod:name]</span>
+           <span class='s2'>[vod:score]</span></p>
+         <p class='star'>[vod:starring]</p>
+          </div>
+         </a></li>
+{/maccms:vod}
+</ul>
+</div>
+</div>
+{/maccms:matrix}
+</div>
+<div class="hot_film">
+{maccms:matrix type=2 table=vod}
+<div class="single-strong">[matrix:name]排行榜</div>
+<div class="hot_film_list">
+{maccms:vod num=10 by=score type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+{/maccms:matrix}
+{maccms:matrix type=2 table=vod}
+<div class="single-strong">热播[matrix:name]</div>
+<div class="hot_film_list">
+{maccms:vod num=10 by=hits type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+{/maccms:matrix}
+</div>
+</div>
+<div class="Film_list">
+{maccms:matrix type=3 table=vod}
+<div class="single-strong">最新[matrix:name]<span class="chak"><a  target="_blank"  href="[matrix:link]">查看更多</a></span></div>
+<div class="b-listtab-main">
+<div class="s-tab-main">
+<ul class="list g-clear">
+{maccms:vod num=10 by=time type=[matrix:id] order=desc year=2017}
+<li class='item'><a  target="_blank"  class='js-tongjic' href='[vod:playlink]' title='[vod:name]'>
+         <div class='cover g-playicon'>
+          <img src='[vod:pic]' alt='[vod:name]' />
+          <span class='pay'>[vod:typename]</span><span class='hint'>[vod:year]</span>
+         </div>
+         <div class='detail'>
+		 <p class='title g-clear'>
+           <span class='s1'>[vod:name]</span>
+           <span class='s2'>[vod:score]</span></p>
+         <p class='star'>[vod:starring]</p>
+          </div>
+         </a></li>
+{/maccms:vod}
+</ul>
+</div>
+</div>
+{/maccms:matrix}
+</div>
+<div class="hot_film">
+{maccms:matrix type=3 table=vod}
+<div class="single-strong">[matrix:name]排行榜</div>
+<div class="hot_film_list">
+{maccms:vod num=9 by=score type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+{/maccms:matrix}
+{maccms:matrix type=3 table=vod}
+<div class="single-strong">热播[matrix:name]</div>
+<div class="hot_film_list">
+{maccms:vod num=10 by=hits type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+{/maccms:matrix}
+</div>
+</div>
+<div class="Film_list">
+{maccms:matrix type=4 table=vod}
+<div class="single-strong">最新[matrix:name]<span class="chak"><a  target="_blank"  href="[matrix:link]">查看更多</a></span></div>
+<div class="b-listtab-main">
+<div class="s-tab-main">
+<ul class="list g-clear">
+{maccms:vod num=10 by=time type=[matrix:id] order=desc year=2017}
+<li class='item'><a  target="_blank"  class='js-tongjic' href='[vod:playlink]' title='[vod:name]'>
+         <div class='cover g-playicon'>
+          <img src='[vod:pic]' alt='[vod:name]' />
+          <span class='pay'>[vod:typename]</span><span class='hint'>[vod:year]</span>
+         </div>
+         <div class='detail'>
+		 <p class='title g-clear'>
+           <span class='s1'>[vod:name]</span>
+           <span class='s2'>[vod:score]</span></p>
+         <p class='star'>[vod:starring]</p>
+          </div>
+         </a></li>
+{/maccms:vod}
+</ul>
+</div>
+</div>
+{/maccms:matrix}
+</div>
+<div class="hot_film">
+{maccms:matrix type=4 table=vod}
+<div class="single-strong">[matrix:name]排行榜</div>
+<div class="hot_film_list">
+{maccms:vod num=10 by=score type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+{/maccms:matrix}
+{maccms:matrix type=4 table=vod}
+<div class="single-strong">热播[matrix:name]</div>
+<div class="hot_film_list">
+{maccms:vod num=9 by=hits type=[matrix:id] order=desc}
+<a  target="_blank"  href="[vod:playlink]"><span {if-A:[vod:num]<4}class="Serial_number"{endif-A}{if-A:[vod:num]>3}class="Serial_numberh"{endif-A}>[vod:num]</span><span class="vodname">[vod:name]</span><span class="list_score">[vod:score]分</span></a>
+{/maccms:vod}
+</div>
+
+{/maccms:matrix}
+</div>
+</div>
+<div class="link1">
+<div class="single-strong">友情链接 <span class="chak_link">[ 申请友链联系QQ:{maccms:qq} ]</span></div>
+</div>
+<div class="link">
+{maccms:link type=text}
+<a  target="_blank"  class="link_list" href="[link:link]" target="_black">[link:name]</a>
+{/maccms:link}
+</div>
+</section>
+{maccms:foot}
+</body>
+</html>

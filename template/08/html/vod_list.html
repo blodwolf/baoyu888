@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="cache-control" content="no-siteapp">
+<title>{maccms:name}-最新{page:name}</title>
+{maccms:include}
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/movie.css' type='text/css' media='all' />
+<script type='text/javascript' src='http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js?ver=0.5'></script>
+<meta name="keywords" content="{if-A:"[matrix:key]"=""}{maccms:keywords}{endif-A}{if-A:"[matrix:key]"<>""}[matrix:key]{endif-A}">
+<meta name="description" content="{if-A:"[matrix:des]"=""}{maccms:description}{endif-A}{if-A:"[matrix:des]"<>""}[matrix:des]{endif-A}">
+<link rel="Shortcut Icon" href="{maccms:path_tpl}images/favicon.png">
+<link rel="Bookmark" href="{maccms:path_tpl}images/favicon.png">
+<!--[if lt IE 9]><script src="{maccms:path_tpl}js/html5.js"></script><![endif]-->
+</head>
+<body class="page-template page-template-pages page-template-posts-film page-template-pagesposts-film-php page page-id-9">
+{maccms:head} 
+<section class="container"><div class="fenlei">
+<div class="b-listfilter" style="padding: 0px;">
+<style>
+#noall{
+	background-color: #aik651;
+    color: #fff;
+}
+</style>
+<dl class="b-listfilter-item js-listfilter" style="padding-left: 0px;height:auto;padding-right:0px;">
+<dd class="item g-clear js-listfilter-content" style="margin: 0;">
+<a href='javascript:;' class="menu-itema" target='_self'>分类：</a>
+<a href='{page:linktype}' {if-A:"{page:pid}"="0"}class="menu-itema"{endif-A} target='_self'>全部</a>
+ {maccms:menu type=auto}<a href='[menu:link]' {if-A:"{page:id}"="[menu:id]"}class="menu-itema"{endif-A} target='_self'>[menu:name]</a>{/maccms:menu}
+<a href='?m=vod-type-id-{maccms:curvodtypeid}-pg-1.html' target='_self'>返回</a>
+</dd>
+</dl>
+<dl class="b-listfilter-item js-listfilter" style="padding-left: 0px;height:auto;padding-right:0px;">
+<dd class="item g-clear js-listfilter-content" style="margin: 0;">
+<a href='javascript:;' class="menu-itema" target='_self'>类型：</a>
+<!--{page:class}-->
+<a href='{page:linkclass}' {if-A:"{page:class}"=""}class="menu-itema"{endif-A} target='_self'>全部</a>
+{maccms:class type=auto}<a href='[class:link]' {if-A:"{page:class}"="[class:id]"}class="menu-itema"{endif-A} target='_self'>[class:name]</a>{/maccms:class}
+</dd>
+</dl>
+<dl class="b-listfilter-item js-listfilter" style="padding-left: 0px;height:auto;padding-right:0px;">
+<dd class="item g-clear js-listfilter-content" style="margin: 0;">
+<a href='javascript:;' class="menu-itema" target='_self'>地区：</a>
+<!--{page:area}-->
+<a href='{page:linkarea}' {if-A:"{page:area}"=""} class="menu-itema"{endif-A} target='_self'>全部</a>
+{maccms:area type=auto order=asc}<a href='[area:link]' {if-A:"{page:area}"="[area:name]"}class="menu-itema"{endif-A} target='_self'>[area:name]</a>{/maccms:area}
+</dd>
+</dl>
+<dl class="b-listfilter-item js-listfilter" style="padding-left: 0px;height:auto;padding-right:0px;">
+<dd class="item g-clear js-listfilter-content" style="margin: 0;">
+<a href='javascript:;' class="menu-itema" target='_self'>年代：</a>
+<!--{page:year}-->
+<a href='{page:linkyear}' {if-A:"{page:year}"=""} class="menu-itema"{endif-A} target='_self'>全部</a>
+ {maccms:year type=auto start=2000 end=2017 order=desc}<a href='[year:link]' {if-A:"{page:year}"="[year:name]"}class="menu-itema"{endif-A} target='_self'>[year:name]</a>{/maccms:year}
+</dd>
+</dl>
+</div>
+</div>
+<div class="m-g">
+<div class="b-listtab-main">
+<div>
+<div>
+<div class="s-tab-main">
+   <ul class="list g-clear">
+{maccms:vod pagesize=48 type=all order=desc by=time} 
+<li class='item'><a class='js-tongjic' href='[vod:playlink]' title='[vod:name]'>
+         <div class='cover g-playicon'>
+          <img src='[vod:pic]' alt='[vod:name]' />
+          <span class='pay'>[vod:typename]</span><span class='hint'>[vod:year]</span>
+         </div>
+         <div class='detail'>
+		 <p class='title g-clear'>
+           <span class='s1'>[vod:name]</span>
+           <span class='s2'>[vod:score]</span></p>
+         <p class='star'>[vod:starring]</p>
+          </div>
+         </a></li>
+ {/maccms:vod} 
+        </ul>
+                </div>
+    </div>
+</div>
+     <div class="pages">{maccms:pages len=8}</div>
+</div></div>
+</section>
+{maccms:foot}
+</body>
+</html>

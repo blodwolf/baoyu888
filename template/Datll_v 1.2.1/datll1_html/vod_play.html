@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<title>[vod:name]_高清电影院_</title>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<meta name="keywords" content="[vod:name]" />
+<meta name="description" content="[vod:name]剧情:[vod:contenttext len=1000]" />
+<link href="/favicon.ico" type="image/x-icon" rel="icon">
+{maccms:include}
+</head>
+<body>
+<script>var SitePath='{maccms:path}',SiteAid='{maccms:siteaid}',SiteTid='{maccms:sitetid}',SiteId='{maccms:siteid}';</script>
+{maccms:head}
+<div class="player mb">
+  <div class="main"> [vod:playerinfo][vod:player]
+  <div class="player_headline">
+  
+    <div class="mod_intro">
+      <div class="video_base _base">
+        <h1 class="video_title" title="[vod:name]"> [vod:name] </h1>
+      </div>
+      <div class="video_info_wrap">
+        <div class="video_info">
+          <div class="video_info_cell video_info_cell_1">
+            <div class="video_user _video_user"> <a href="[vod:link]" target="_blank" class="user_info"> <img src="[vod:pic]" class="user_avatar" > <span class="user_name">[vod:name]</span> </a> <a href="javascript:" class="btn_book" title="播放次数"> 播放 <span class="num">[vod:hits] 次</span> </a> <span class="tag_item">[vod:addtime style=yy-mm-dd]发布 </span> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--
+    <div class="mod_ad">
+        
+       <a href="https://item.taobao.com/item.htm?id=544715640101" target="_blank">
+        <img src="./template/menghuan/images/0.jpg" alt="立刻购买苹果cms模板" width="400" height="66" class="">
+        </a>
+    </div>-->
+
+
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="main">
+<div class="tab-title mb clearfix">
+  <ul>
+    <div class="cont-banner">
+      <li class="err"></li>
+      <li class="on">如果视频在微信里面不能播放或者加载失败,请复制链接在手机浏览器中打开！如果加载失败，请多刷新几次网页。推荐使用UC浏览器。个别电影要稍微等久一点。</li>
+    </div>
+  </ul>
+</div>
+<!--/播放页面广告1-->
+<script src="{maccms:path_ads}shoujibofang1.js"></script>
+<!--/播放地址-->
+<div id="stab1" class="tab-down mb clearfix">
+  <div class="playfrom tab8 clearfix">
+    <ul>
+      {maccms:play}
+      <li id="tab8[play:num]" onClick="setTab('tab8','stab8',[play:num],[play:count])" {if-A:"[play:from]"= "[vod:playfrom]"} class="on" {endif-A}><i class="playerico ico-Azhan"></i>[play:show]</li>
+      {/maccms:play}
+    </ul>
+  </div>
+  {maccms:play}
+  <div id="stab8[play:num]" class="playlist clearfix" {if-A:"[play:num]"> "1"} style="display:none" {endif-A} >
+    <div class="h1 clearfix">
+      <p class="intro"><font color="#f06000">《[play:show]》</font>[play:tip]</p>
+      <p class="jj"><span id="vlink_[play:num]_s1"><em onClick="Order(1,'vlink_[play:num]',[play:num])">倒序↓</em></span><span id="vlink_[play:num]_s2"><em onClick="Order(0,'vlink_[play:num]',[play:num])" class="over">顺序↑</em></span></p>
+    </div>
+    <div id="vlink_[play:num]" class="videourl clearfix">
+      <ul>
+        {maccms:url order=asc}
+        <li><a title='[url:name]' href='[url:link]' target="_self">[url:name]</a></li>
+        {/maccms:url}
+      </ul>
+    </div>
+  </div>
+  {/maccms:play} </div>
+<!--/播放地址结束-->
+<!--/备用排列地址开始-->
+<!-- {maccms:play}
+  	<div class="playfrom tab8 clearfix">
+    <ul>     
+    <li id="tab81" onClick="setTab('tab8','stab8',1,1)" class="on"><i class="playerico ico-Azhan"></i> [play:from]</li>
+    </ul>
+  </div>
+  
+  <div id="stab81" class="playlist clearfix">
+  	<div class="h1 clearfix">
+  		<p class="intro">[play:tip]</p>
+  		<p class="jj"><span id="vlink_1_s1"><em onClick="Order(1,'vlink_1',1)">倒序↓</em></span><span id="vlink_1_s2"><em onClick="Order(0,'vlink_1',1)" class="over">顺序↑</em></span></p>
+  	</div>
+    
+	 <div id="vlink_1" class="videourl clearfix"><ul>
+	 {maccms:url order=desc} 
+	 <li><a title='[url:name]' href='[url:link]' target="_self">[url:name]</a></li>
+     {/maccms:url}
+	 </ul></div>  
+  </div>
+    {/maccms:play} 
+	<!--/播放地址结束-->
+<!--/播放页面广告2-->
+<script src="{maccms:path_ads}shoujibofang2.js"></script>
+<!--评论-->
+[vod:comment]
+
+   <div class="index-area clearfix">
+    <h1 class="title index-color">猜你喜欢</h1>
+    <ul>
+    {maccms:vod num=6 order=desc by=hits type={maccms:curvodtypeid} } 
+    <li class="p1 m1"><a class="link-hover" href="[vod:link]" title="[vod:name]"><img class="lazy" data-original="[vod:pic]" src="{maccms:path_tpl}images/load.gif" alt="[vod:name]"><span class="video-bg"></span><span class="lzbz"><p class="name">[vod:name]</p><p class="actor">[vod:starring]</p><p class="actor">[vod:typename]</p><p class="actor">[vod:year]/[vod:area]</p></span><p class="other"><i>[vod:remarks]</i></p></a>
+    </li>
+    {/maccms:vod}
+    </ul>
+    </div>
+</div>
+<!--/播放页面广告3->
+<script src="{maccms:path_ads}shoujibofang3.js"></script>
+
+
+<!--/底部-->
+<!--/播放页面广告4-->
+<script src="{maccms:path_ads}shoujibofang4.js"></script>
+<!--/手机播放也漂浮广告-->
+<script src="{maccms:path_ads}shoujibofangyepiaofu.js"></script>
+{maccms:foot}
+<!--/禁止右键-->
+<script type="text/javascript"> document.body.oncontextmenu=document.body.ondragstart= document.body.onselectstart=document.body.onbeforecopy=function(){return false;};
+document.body.onselect=document.body.oncopy=document.body.onmouseup=function(){document.selection.empty();}; </script>
+</body>
+</html>

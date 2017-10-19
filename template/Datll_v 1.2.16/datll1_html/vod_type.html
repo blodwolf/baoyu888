@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<link href="/favicon.ico" type="image/x-icon" rel="icon">
+<title>{page:name}-2016最新好看的{page:name}-{page:name}排行榜推荐-第{page:now}页-刺客吧在线影院 v.cike8.com</title>
+<meta name="keywords" content="{page:name},2016最新好看的{page:name},{page:name}大全,梦幻掌上影院,juzigou.cn" />
+<meta name="description" content="{maccms:description}" />
+<script src="{maccms:path_tpl}js/video.js"></script>
+{maccms:include}
+</head>
+{maccms:head}
+<div class="main">
+	<h1 class="title">{page:textlink} </h1>
+  <div class="sy-all mb clearfix">
+    <div class="sy-title clearfix">
+     <p class="type">
+      <span class="type">{page:name}</span>
+     </p>
+      <p class="chg sbtn" _s_nav="sj-gjsy">筛选<i class="sjbgs"></i><i class="sjbgx"></i></p>
+    </div>
+  <div class="sy-nav-down clearfix">
+  <div id="sj-gjsy" class="sy clearfix" _s_nav="sj-gjsy" style="display:none;">
+          <dl class="clearfix"><dt><span>按分类</span></dt>
+          
+          {maccms:menu type=auto}
+          <dd><a href="[menu:link]" {if-A:"{page:id}"="[menu:id]"} class="on" {endif-A}>[menu:name]</a></dd>
+         {/maccms:menu}
+          </dl>
+          <dl class="clearfix"><dt><span>按年代</span></dt>
+         
+         {maccms:year type=auto start=1995 end=2016 order=desc}
+          <dd><a href="[year:link]"{if-A:"{page:year}"="[year:name]"} class="on" {endif-A}>[year:name]
+</a></dd>
+         {/maccms:year}
+          
+          </dl>
+		  
+          <dl class="clearfix"><dt><span>按地区</span></dt>
+           
+          {maccms:area type=auto order=desc}
+		  <dd><a href="[area:link]"{if-A:"{page:area}"="[area:name]"} class="on" {endif-A}>[area:name]
+</a></dd>
+{/maccms:area} 
+          </dl>
+  </div>
+  </div>
+  </div>
+  <div class="sy-jg mb">
+     <p class="jg">
+      共<span class="count">{page:datacount}</span>个筛选结果
+     </p>
+     <p class="px">
+      <a class="{if-A:"{page:by}"="time"}on {endif-A}time on" href="{page:linkbytime}"><em></em>最新</a>
+      <a class="{if-A:"{page:by}"="hits"}on {endif-A}rq" href="{page:linkbyhits}"><em></em>人气</a>
+      <a class="{if-A:"{page:by}"="score"}on {endif-A}tj" href="{page:linkbyscore}"><em></em>推荐</a>
+     </p>
+  </div>
+
+<!--/分类页面广告1-->
+<script src="{maccms:path_ads}shoujifenye1.js"></script>
+
+
+	<div class="index-area clearfix">
+	<ul>
+   
+   
+  
+  
+  
+  
+   {maccms:vod pagesize=30 by=time order=desc}
+   <div class="qcontainer ">
+		<div class="film">
+			<div class="face front">
+            
+             <li class="p1 MPli {if-A:[vod:num]%3=0} mmr0 {endif-A} {if-A:[vod:num]%6=0} mmr0 pmr0 {endif-A}"><a class="link-hover" href="[vod:link]" title="[vod:name]"><img class="lazy" data-original="[vod:pic]" src="{maccms:path_tpl}images/load.gif" alt="[vod:name]">
+            
+            <span class="video-bg mpvideo-bg"></span>
+            
+            
+            <span class="lzbz mplzbz"><p class="name">[vod:name]</p><p class="actor">[vod:starring]</p><p class="actor">[vod:typename]</p><p class="actor">[vod:year]/[vod:area]</p></span>
+            
+            
+            <p class="other"><i>[vod:remarks]</i></p></a>
+    </li>
+    
+    </div>
+			<div class="face back">
+            
+             <li class="p1 MPli {if-A:[vod:num]%3=0} mmr0 {endif-A} {if-A:[vod:num]%6=0} mmr0 pmr0 {endif-A}"><a class="link-hover" href="[vod:link]" title="[vod:name]"><img class="lazy" data-original="[vod:pic]" src="{maccms:path_tpl}images/load.gif" alt="[vod:name]">
+            
+            
+            
+            
+            
+            <span class="video-bg"></span><span class="lzbz"><p class="name">[vod:name]</p><p class="actor">[vod:starring]</p><p class="actor">[vod:typename]</p><p class="actor">[vod:year]/[vod:area]</p></span><p class="other"><i>[vod:remarks]</i></p></a>
+    </li>
+            
+            
+            </div>
+		</div>
+	</div>
+    {/maccms:vod}
+  
+  
+  
+  
+  
+  
+  
+    </ul>
+	</div>
+<div class="page mb clearfix">
+
+{maccms:pages len=5}
+</div>   
+</div>
+<!--/底部-->
+<!--/分类页面广告2-->
+<script src="{maccms:path_ads}shoujifenye2.js"></script>
+<!--/手机分页漂浮广告-->
+<script src="{maccms:path_ads}shoujifenyepiaofu.js"></script>
+{maccms:foot}<!--/禁止右键-->
+<script type="text/javascript"> document.body.oncontextmenu=document.body.ondragstart= document.body.onselectstart=document.body.onbeforecopy=function(){return false;};
+document.body.onselect=document.body.oncopy=document.body.onmouseup=function(){document.selection.empty();}; </script>
+</body></html>

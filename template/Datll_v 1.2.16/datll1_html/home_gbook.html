@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<title>{maccms:name} </title>
+<meta name="keywords" content="{maccms:keywords}" />
+<meta name="description" content="{maccms:description}" />
+<link href="/favicon.ico" type="image/x-icon" rel="icon">
+
+
+{maccms:include}
+</head>
+
+<body>
+<!--/头部-->
+{maccms:head}
+<div class="main">
+
+<div class='leaveNavInfo'><h3><span id='adminleaveword'></span>{maccms:name}留言板、求片、片子报错！</h3></div>
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="alert alert-info cydy-contact" style="background-color: #4DBDA7;"><strong>欢迎提出您的宝贵意见 管理员邮箱：</strong></div>
+    </div>
+    <div class="col-md-6 col-sm-12 ">
+      <div class="alert alert-success cydy-contact" style="background-color: #DA7825;"><strong> 喜欢哪部电影和我们说  我们让它上头条！</strong></div>
+    </div>
+    <div class="cl"></div>
+  </div>
+
+  <style>
+.row{padding:10px 0}
+.col-md-6 {width: 50%;float: left;}	
+	.cydy-contact{
+	text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+	padding:15px;
+    color: #fff;}
+</style>  
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<!--第三发评论系统-->
+
+<!--
+=========================================================================================
+======多说评论即将关闭推荐使用网易云跟帖注册地址：https://gentie.163.com/index.html======
+=========================================================================================
+-->
+
+<!-- 评论框 start -->
+	<div class="ds-thread" data-category="$catid" data-thread-key="{id_encode("content_$catid",$id,$siteid)}" data-title="{new_addslashes($title)}"></div>
+<!-- 评论框 end -->
+<!-- 公共JS代码 start (一个网页只需插入一次) -->
+<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+
+<!--网易云跟帖评论代码粘贴处-->
+
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "e6c818847acb48c1902ca52732b4382a",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+
+
+
+
+
+
+</div>
+
+
+
+<div class="ylink clearfix">
+友情连接：
+   
+    {maccms:link num=50}   
+    <a href="[link:link]" target="_blank">[link:name]</a>	
+	{/maccms:link}
+    
+    
+    
+</div>
+<!--/底部-->
+<!--/手机首页页漂浮广告-->
+
+{maccms:foot}
+</body>
+</html>

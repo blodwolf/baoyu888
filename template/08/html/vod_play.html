@@ -1,0 +1,137 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="cache-control" content="no-siteapp">
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/index.css' type='text/css' media='all' />
+<link rel='stylesheet' id='main-css'  href='{maccms:path_tpl}css/play.css' type='text/css' media='all' />
+<script type='text/javascript' src='{maccms:path_tpl}js/qrcode.min.js'></script>
+{maccms:include}
+<script type='text/javascript' src='http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js?ver=0.5'></script>
+<meta name="keywords" content="[vod:name]在线观看,高清[vod:name]在线观看,枪版[vod:name]在线观看">
+<meta name="description" content="{maccms:description}">
+<title>[vod:name]在线观看-{maccms:name}</title>
+<link rel="Shortcut Icon" href="{maccms:path_tpl}images/favicon.png">
+<link rel="Bookmark" href="{maccms:path_tpl}images/favicon.png">
+<!--[if lt IE 9]><script src="{maccms:path_tpl}js/html5.js"></script><![endif]-->
+<style>
+.w-newfigure{list-style:none; float:left;}
+.list{ margin-left:-40px;}
+#code img{
+	margin: 0 auto;
+}
+</style>
+</head>
+<body class="page-template page-template-pages page-template-posts-play page-template-pagesposts-play-php page page-id-16">
+{maccms:head} 
+<div class="single-post">
+<section class="container">
+    <div class="content-wrap">
+    	<div class="content">
+<div id="bof">
+<script type="text/javascript" language="javascript" src="{maccms:path_ads}all-top.js"></script>
+<div class="sptitle"><h2 class="single-strong">正在播放:[vod:name] - [vod:playname]</h2></div>
+<div class="bofangdiv">
+  [vod:playerinfo]
+      [vod:player]
+</div>
+<p style="background-color: #1db69a;color: #FFFFFF;padding-top: 0.4rem; padding-left: 0.75rem; padding-right: 0.75rem;margin:0; font-size: .7rem; font-size: 14px;padding-bottom: 0.35rem;text-align:center;">如等待10秒以上播放器还没出现请刷新页面！觉得效果不满意可以尝试切换线路，不同的线路播放效果不同！</p>
+</div>
+<div class="am-cf"></div>
+<div class="am-panel am-panel-default">
+<div class="am-panel-bd">
+<script type="text/javascript">
+function xldata(urls){
+	var videourls = document.getElementById('video');
+	var xlqieh = document.getElementById('videourlgo');
+	videourls.src = urls+xlqieh.href;
+}
+</script>
+      	<div class="juji">
+		<ul class="juji-hd">{maccms:play order=asc}<li {if-A:[play:num]=[vod:playsrc]}class="active"{endif-A}>[play:show]</li>{/maccms:play} </ul>
+		<ul class="juji-bd">{maccms:play order=asc}<li {if-A:[play:num]=[vod:playsrc]}style="display: list-item;"{endif-A}>{maccms:url order=desc }<a href="[url:link]" target="_self" class="am-btn am-btn-default lipbtn">[url:name]</a>{/maccms:url}</li>{/maccms:play} </ul>
+	</div>
+<div style="clear: both;"></div>
+<p class="jianjie"><h3 class="single-strong">简介</h3><p class="item-desc js-close-wrap" >[vod:content]</p>
+<div style="clear: both;"></div> 
+<div id="xuji"></div>
+<div class="video-list view-font">
+<div class="dianshijua" id="dianshijuid">
+</div>
+ </div>
+</div>
+</div>
+<br/>
+<div class="article-actions clearfix">
+ <div class="shares">
+        <strong>分享到：</strong>
+        <a href="javascript:;" data-url="{maccms:url}[vod:playlink]" class="share-weixin" title="分享到微信"><i class="fa"></i></a><a target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={maccms:url}[vod:playlink]&title=[vod:name]在线观看&desc={maccms:name},最新电影,电视剧,综艺节目,全部免费观看!" class="share-qzone" title="分享到QQ空间"><i class="fa"></i></a><a target="_blank" href="http://service.weibo.com/share/share.php?title=[vod:name]在线观看&url={maccms:url}[vod:playlink]&source=bookmark&pic=[vod:pic]" class="share-tsina" title="分享到新浪微博"><i class="fa"></i></a><a target="_blank" href="http://share.v.t.qq.com/index.php?c=share&a=index&url={maccms:url}[vod:playlink]&title=[vod:name]在线观看"  class="share-tqq" title="分享到腾讯微博"><i class="fa"></i></a><a target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url={maccms:url}[vod:playlink]&desc={maccms:name},最新电影,电视剧,综艺节目,全部免费观看!&summary=[vod:name]在线观看&site=zeshlife&pics=[vod:pic]
+" class="share-sqq" title="分享到QQ好友"><i class="fa"></i></a><a target="_blank" href="http://widget.renren.com/dialog/share?srcUrl=[vod:pic]&resourceUrl={maccms:url}[vod:playlink]&title=[vod:name]在线观看&description={maccms:name},最新电影,电视剧,综艺节目,全部免费观看!" class="share-renren" title="分享到人人网"><i class="fa"></i></a><a target="_blank" href="http://www.douban.com/share/service?image=[vod:pic]&href={maccms:url}[vod:playlink]&name=[vod:name]在线观看&text={maccms:name},最新电影,电视剧,综艺节目,全部免费观看!" class="share-douban" title="分享到豆瓣网"><i class="fa"></i></a>
+    </div>   
+ <a href="javascript:;" class="action-rewards" etap="rewards">打赏</a>
+    </div> 
+</div>
+    	</div>
+<div class="sidebar">
+<div class="widget widget-textasst">
+<a class="style01" href="http://www.hhh.cool/vip.php" target="_blank"><strong>视频解析</strong><h2 id="shan">各大网站VIP视频解析</h2>
+	<p>本站提供免费视频解析，如遇到部分未添加资源的视频，请复制播放链接后点击此处单独进行解析播放！<br/></p>
+</a></div>
+<div class="widget widget-textasst"><a class="style02" href="" target="_blank"><strong>关注微信</strong><div class="article-wechats"> </br> <img src="{maccms:path_tpl}images/qrcode.png"></div> </a></div>
+
+
+<div class="widget widget-textasst"><a class="style03"  href="javascript:;" target="_blank"><strong>手机扫描二维码立即播放--> <span style="color:red;">[vod:name]</span></strong></br></br>
+<div id=code style="margin:0 auto;"></div></a></div>
+
+
+<div class="widget widget_textasst"><div class="article-wechats"><script type="text/javascript">
+    /*330*250 创建于 2017/10/10*/
+    var cpro_id = "u3109052";
+</script>
+<!-- <script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script> -->
+</div></div> 
+</section>
+</div>
+{maccms:foot}
+<div class="rewards-popover-mask" etap="rewards-close"></div>
+	<div class="rewards-popover">
+		<h3>觉得本站还不错就打赏一下吧！</h3>
+				<div class="rewards-popover-item">
+			<h4>支付宝扫一扫打赏</h4>
+			<img src="{maccms:path_tpl}images/zfb.png">
+		</div>
+						<div class="rewards-popover-item">
+			<h4>微信扫一扫打赏</h4>
+			<img src="{maccms:path_tpl}images/wx.png">
+		</div>
+				<span class="rewards-popover-close" etap="rewards-close"></span>
+	</div> 
+<script type="text/javascript">
+$(function(){
+    function jujis(jujiTit,on,jujiCon){
+        $(jujiTit).children().hover(function(){
+            $(this).addClass(on).siblings().removeClass(on);
+            var index = $(jujiTit).children().index(this);
+           	$(jujiCon).children().eq(index).show().siblings().hide();
+    	});
+	};
+    jujis(".juji-hd","active",".juji-bd");
+    var qrcode = new QRCode(document.getElementById("code"), {
+	width : 250,
+	height : 250
+});
+	qrcode.makeCode('http://www.hhh.cool[vod:playlink]');
+
+	setInterval(function(){
+		var color = '#'+Math.floor(Math.random()*16777215).toString(16); 
+		$('#shan').css('color',color);
+	},100)
+});
+</script>
+</body>
+</html>

